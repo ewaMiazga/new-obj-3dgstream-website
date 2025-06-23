@@ -103,15 +103,26 @@
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+    <h2 class="title is-4 has-text-centered">Side-by-Side Comparison</h2>
+
+    <div class="columns is-centered is-vcentered">
+      <!-- Left Video -->
+      <div class="column has-text-centered">
+        <p><strong>Ours</strong></p>
+        <video autoplay loop muted playsinline width="100%">
+          <source src="videos/ours.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Right Video -->
+      <div class="column has-text-centered">
+        <p><strong>Ground Truth</strong></p>
+        <video autoplay loop muted playsinline width="100%">
+          <source src="videos/gt.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
 </section>
@@ -175,29 +186,6 @@
 <!-- End image carousel -->
 
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
 <!-- Video carousel -->
 <section class="hero is-small">
   <div class="hero-body">
@@ -234,28 +222,110 @@
 
 
 
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@String(PAMI = {IEEE Trans. Pattern Anal. Mach. Intell.})
+@String(IJCV = {Int. J. Comput. Vis.})
+@String(CVPR= {IEEE Conf. Comput. Vis. Pattern Recog.})
+@String(ICCV= {Int. Conf. Comput. Vis.})
+@String(ECCV= {Eur. Conf. Comput. Vis.})
+@String(NIPS= {Adv. Neural Inform. Process. Syst.})
+@String(ICPR = {Int. Conf. Pattern Recog.})
+@String(BMVC= {Brit. Mach. Vis. Conf.})
+@String(TOG= {ACM Trans. Graph.})
+@String(TIP  = {IEEE Trans. Image Process.})
+@String(TVCG  = {IEEE Trans. Vis. Comput. Graph.})
+@String(TMM  = {IEEE Trans. Multimedia})
+@String(ACMMM= {ACM Int. Conf. Multimedia})
+@String(ICME = {Int. Conf. Multimedia and Expo})
+@String(ICASSP=	{ICASSP})
+@String(ICIP = {IEEE Int. Conf. Image Process.})
+@String(ACCV  = {ACCV})
+@String(ICLR = {Int. Conf. Learn. Represent.})
+@String(IJCAI = {IJCAI})
+@String(PR   = {Pattern Recognition})
+@String(AAAI = {AAAI})
+@String(CVPRW= {IEEE Conf. Comput. Vis. Pattern Recog. Worksh.})
+@String(CSVT = {IEEE Trans. Circuit Syst. Video Technol.})
+
+@String(SPL	= {IEEE Sign. Process. Letters})
+@String(VR   = {Vis. Res.})
+@String(JOV	 = {J. Vis.})
+@String(TVC  = {The Vis. Comput.})
+@String(JCST  = {J. Comput. Sci. Tech.})
+@String(CGF  = {Comput. Graph. Forum})
+@String(CVM = {Computational Visual Media})
+
+
+@String(PAMI  = {IEEE TPAMI})
+@String(IJCV  = {IJCV})
+@String(CVPR  = {CVPR})
+@String(ICCV  = {ICCV})
+@String(ECCV  = {ECCV})
+@String(NIPS  = {NeurIPS})
+@String(ICPR  = {ICPR})
+@String(BMVC  =	{BMVC})
+@String(TOG   = {ACM TOG})
+@String(TIP   = {IEEE TIP})
+@String(TVCG  = {IEEE TVCG})
+@String(TCSVT = {IEEE TCSVT})
+@String(TMM   =	{IEEE TMM})
+@String(ACMMM = {ACM MM})
+@String(ICME  =	{ICME})
+@String(ICASSP=	{ICASSP})
+@String(ICIP  = {ICIP})
+@String(ACCV  = {ACCV})
+@String(ICLR  = {ICLR})
+@String(IJCAI = {IJCAI})
+@String(PR = {PR})
+@String(AAAI = {AAAI})
+@String(CVPRW= {CVPRW})
+@String(CSVT = {IEEE TCSVT})
+
+%% MY CITATIONS
+
+@misc{sun20243dgstreamontheflytraining3d,
+      title={3DGStream: On-the-Fly Training of 3D Gaussians for Efficient Streaming of Photo-Realistic Free-Viewpoint Videos}, 
+      author={Jiakai Sun and Han Jiao and Guangyuan Li and Zhanjie Zhang and Lei Zhao and Wei Xing},
+      year={2024},
+      eprint={2403.01444},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2403.01444}, 
+}
+
+
+@misc{gao2024hicomhierarchicalcoherentmotion,
+      title={HiCoM: Hierarchical Coherent Motion for Streamable Dynamic Scene with 3D Gaussian Splatting}, 
+      author={Qiankun Gao and Jiarui Meng and Chengxiang Wen and Jie Chen and Jian Zhang},
+      year={2024},
+      eprint={2411.07541},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2411.07541}, 
+}
+
+@misc{luiten2023dynamic3dgaussianstracking,
+      title={Dynamic 3D Gaussians: Tracking by Persistent Dynamic View Synthesis}, 
+      author={Jonathon Luiten and Georgios Kopanas and Bastian Leibe and Deva Ramanan},
+      year={2023},
+      eprint={2308.09713},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2308.09713}, 
+}
+
+@misc{kerbl20233dgaussiansplattingrealtime,
+      title={3D Gaussian Splatting for Real-Time Radiance Field Rendering}, 
+      author={Bernhard Kerbl and Georgios Kopanas and Thomas Leimkühler and George Drettakis},
+      year={2023},
+      eprint={2308.04079},
+      archivePrefix={arXiv},
+      primaryClass={cs.GR},
+      url={https://arxiv.org/abs/2308.04079}, 
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->

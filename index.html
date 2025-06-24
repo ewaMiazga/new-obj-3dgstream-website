@@ -197,27 +197,62 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
             <video poster="" id="video1" autoplay controls muted loop height="100%">
-              <source src="static/videos/carousel1.mp4" type="video/mp4">
+              <source src="teaser-videos/0.2-spawn500-dyn-color-spawn-300iter-new-loss-color-map-min-dist-1-col-mask.mp4" type="video/mp4">
             </video>
-            <p class="video-title">Title for Video 1</p>
+            <p class="video-title">Ours</p>
+            <h2 class="Ours">
           </div>
           <div class="item item-video2">
             <video poster="" id="video2" autoplay controls muted loop height="100%">
-              <source src="static/videos/carousel2.mp4" type="video/mp4">
+              <source src="teaser-videos/org-code-spawn1-iter300-0.00007.mp4" type="video/mp4">
             </video>
-            <p class="video-title">Title for Video 2</p>
+            <p class="video-title">3DGStream</p>
+          </div>
+          <div class="item item-video3" style="text-align: center;">
+            <video autoplay controls muted loop width="300" height="auto">
+              <source src="carusel-videos/hicom.mp4" type="video/mp4">
+            </video>
+            <p class="video-title">HiCoM</p>
           </div>
           <div class="item item-video3">
-            <video poster="" id="video3" autoplay controls muted loop height="100%">
-              <source src="static/videos/carousel3.mp4" type="video/mp4">
-            </video>
-            <p class="video-title">Title for Video 3</p>
-          </div>
+              <video poster="" id="video3" autoplay controls muted loop height="100%">
+                <source src="carusel-videos/Dynamic3DGaussians.mp4" type="video/mp4">
+              </video>
+              <p class="video-title">Dynamic 3D Gaussians</p>
+            </div>
+          <div class="item item-video3">
+              <video poster="" id="video3" autoplay controls muted loop height="100%">
+                <source src="carusel-videos/output_gt.mp4" type="video/mp4">
+              </video>
+              <p class="video-title">Ground Truth</p>
+            </div>
       </div>
     </div>
   </div>
 </section>
 <!-- End video carousel -->
+
+<body>
+  <style>
+      #results-carousel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#results-carousel .item {
+  text-align: center;
+}
+
+#results-carousel video {
+  width: 300px;
+  height: auto;
+  border-radius: 6px;
+}
+}
+  </style>
+</body>
+
 
 
   <footer class="footer">

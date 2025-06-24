@@ -234,21 +234,35 @@
 
 <body>
   <style>
-      #results-carousel {
-  display: flex;
-  justify-content: center;
+#results-carousel {
+  display: flex !important;        /* force flex display */
+  flex-wrap: nowrap;               /* keep items in one row */
+  justify-content: center;         /* center horizontally */
+  gap: 20px;                      /* space between items */
+}
+
+#results-carousel .item {
+  flex: 0 0 auto;                 /* do not grow or shrink, keep size */
+  text-align: center;
+  width: 300px;                   /* fixed width for each item */
+}
+
+#results-carousel video {
+  width: 100%;                   /* fill parent .item width */
+  height: auto;
+  border-radius: 6px;
+}
+
+#results-carousel {
+  border: 2px solid red;
+  display: flex !important;
   gap: 20px;
 }
 
 #results-carousel .item {
-  text-align: center;
-}
-
-#results-carousel video {
+  border: 2px solid blue;
   width: 300px;
-  height: auto;
-  border-radius: 6px;
-}
+  text-align: center;
 }
   </style>
 </body>

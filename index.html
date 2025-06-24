@@ -282,6 +282,7 @@
 </div>
 
 
+
 <body>
   <style>
 #results-carousel {
@@ -303,6 +304,58 @@
   border-radius: 6px;
 }
 
+    .carousel {
+  width: 100%;
+  overflow: hidden; /* hide horizontal overflow */
+  position: relative;
+}
+
+.slider {
+  outline: none; /* remove focus outline if desired */
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.3s ease; /* smooth sliding */
+  will-change: transform;
+}
+
+.slider-item {
+  flex: 0 0 384px; /* fixed width */
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+
+.slider-item video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.slider-navigation-previous,
+.slider-navigation-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  color: #333;
+  user-select: none;
+}
+
+.slider-navigation-previous {
+  left: 10px;
+}
+
+.slider-navigation-next {
+  right: 10px;
+}
+
+
+    </style>
+</body>
 
 
   <footer class="footer">

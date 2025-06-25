@@ -294,7 +294,7 @@
     <!-- Quantitative Evaluation -->
     <div class="content">
       <h3 class="title is-4">Quantitative Results</h3>
-      <p>
+      <p> class="is-size-6 mt-2">
         All three methods were trained on a dataset prepared according to the specifications outlined by the original authors. In most cases, this required separate processing for
         the first frame and subsequent frames.
         The reported PSNR values indicate that all three methods
@@ -322,7 +322,7 @@
         them more efficient for practical use.
         </p>
 
-        <p>
+        <p> class="is-size-6 mt-2">
         3DG-Stream emphasizes the importance of undistorting
         subsequent camera frames. This process removes lens distortion from the input images and updates the associated
         camera parameters, resulting in a rectified version of the
@@ -333,15 +333,16 @@
         3DG-Stream, which demonstrated a 39% performance increase. The results for the other methods remained within
         the standard deviation observed across multiple runs.
         </p>
-      <figure class="image is-4by3">
+      <div class="has-text-centered">
         <img src="new-results/eval-graphs.png" alt="Quantitative Evaluation Graph">
-      </figure>
+        style="max-width: 80%; height: auto; margin-top: 1rem;">
+      </div>
     </div>
 
     <!-- Qualitative Evaluation -->
-    <div class="content" style="margin-top: 2rem;">
+    <div class="content" style="margin-top: 3rem;">
       <h3 class="title is-4">Qualitative Results</h3>
-      <p>
+      <p> class="is-size-6 mt-2">
         Eventhough all the methods yield satisfactory results in
         terms of metrics, it is impossible to tell if our evaluation objective was met. To gain comprehensive insight into quality
         of new object reconstruction in the rendered frames from
@@ -410,16 +411,14 @@
         as “flying Gaussians.” Nonetheless, the reliance on view-dependent evaluation remains a key limitation of this approach and should be further addressed in future work.
       </p>
 
-      <div class="columns is-multiline">
-        <div class="column is-half">
-          <figure class="image is-4by3">
+      <div class="columns is-multiline is-variable is-4">
+        <div class="column is-half has-text-centered">
             <img src="new-results/cover-pic.png" alt="Qualitative Result 1">
-          </figure>
+                style="max-width: 100%; height: auto; border: 1px solid #ddd; padding: 4px;">
         </div>
-        <div class="column is-half">
-          <figure class="image is-4by3">
+        <div class="column is-half has-text-centered">
             <img src="new-results/qualitative-res.png" alt="Qualitative Result 2">
-          </figure>
+                style="max-width: 100%; height: auto; border: 1px solid #ddd; padding: 4px;">
         </div>
       </div>
     </div>

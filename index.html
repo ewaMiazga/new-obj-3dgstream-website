@@ -210,62 +210,74 @@
     <div class="content" style="margin-top: 3rem;">
       <h3 class="title is-4">Qualitative Results</h3>
 
-<!-- Videos Section -->
+<!-- Videos Section with Carousel -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <h2 class="title is-4 has-text-centered">Side-by-Side Comparison</h2>
 
-    <div style="display: flex; overflow-x: auto; gap: 1rem; padding-bottom: 1rem; align-items: center;">
+    <div class="carousel carousel-animated carousel-animate-slide" data-autoplay="true" data-loop="true" data-delay="5000">
+      <div class="carousel-container">
 
-      <!-- Video 1 -->
-      <div style="flex: 0 0 320px; text-align: center;">
-        <p><strong>Ours</strong></p>
-        <video autoplay loop muted playsinline width="100%">
-          <source src="teaser-videos/0.2-spawn500-dyn-color-spawn-300iter-new-loss-color-map-min-dist-1-col-mask.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <!-- Video 1 -->
+        <div class="carousel-item is-active has-text-centered">
+          <p><strong>Ours</strong></p>
+          <video autoplay loop muted playsinline width="320px" height="auto">
+            <source src="teaser-videos/0.2-spawn500-dyn-color-spawn-300iter-new-loss-color-map-min-dist-1-col-mask.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="carousel-item has-text-centered">
+          <p><strong>3DGStream</strong></p>
+          <video autoplay loop muted playsinline width="320px" height="auto">
+            <source src="teaser-videos/org-code-spawn1-iter300-0.00007.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="carousel-item has-text-centered">
+          <p><strong>HiCoM</strong></p>
+          <video autoplay loop muted playsinline width="320px" height="auto">
+            <source src="carusel-videos/hicom.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="carousel-item has-text-centered">
+          <p><strong>Dynamic 3D Gaussians</strong></p>
+          <video autoplay loop muted playsinline width="320px" height="auto">
+            <source src="carusel-videos/Dynamic3DGaussians.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="carousel-item has-text-centered">
+          <p><strong>Ground Truth</strong></p>
+          <video autoplay loop muted playsinline width="320px" height="auto">
+            <source src="carusel-videos/output_gt.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
       </div>
 
-      <!-- Video 2 -->
-      <div style="flex: 0 0 320px; text-align: center;">
-        <p><strong>3DGStream</strong></p>
-        <video autoplay loop muted playsinline width="100%">
-          <source src="teaser-videos/org-code-spawn1-iter300-0.00007.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <!-- Controls -->
+      <div class="carousel-navigation is-centered">
+        <div class="carousel-nav-left">
+          <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </div>
+        <div class="carousel-nav-right">
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </div>
       </div>
-
-      <!-- Video 3 -->
-      <div style="flex: 0 0 320px; text-align: center;">
-        <p><strong>HiCoM</strong></p>
-        <video autoplay loop muted playsinline width="100%">
-          <source src="carusel-videos/hicom.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <!-- Video 4 -->
-      <div style="flex: 0 0 320px; text-align: center;">
-        <p><strong>Dynamic 3D Gaussians</strong></p>
-        <video autoplay loop muted playsinline width="100%">
-          <source src="carusel-videos/Dynamic3DGaussians.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <!-- Video 5 -->
-      <div style="flex: 0 0 320px; text-align: center;">
-        <p><strong>Ground Truth</strong></p>
-        <video autoplay loop muted playsinline width="100%">
-          <source src="carusel-videos/output_gt.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
     </div>
   </div>
 </section>
-<!-- End Videos section -->
+
 
 
 
@@ -352,85 +364,6 @@
   </div>
 </section>
 <!-- End Evaluation -->
-
-
-
-
-
-
-<body>
-  <style>
-#results-carousel {
-  display: flex !important;        /* force flex display */
-  flex-wrap: nowrap;               /* keep items in one row */
-  justify-content: center;         /* center horizontally */
-  gap: 20px;                      /* space between items */
-}
-
-#results-carousel .item {
-  flex: 0 0 auto;                 /* do not grow or shrink, keep size */
-  text-align: center;
-  width: 300px;                   /* fixed width for each item */
-}
-
-#results-carousel video {
-  width: 100%;                   /* fill parent .item width */
-  height: auto;
-  border-radius: 6px;
-}
-
-    .carousel {
-  width: 100%;
-  overflow: hidden; /* hide horizontal overflow */
-  position: relative;
-}
-
-.slider {
-  outline: none; /* remove focus outline if desired */
-}
-
-.slider-container {
-  display: flex;
-  transition: transform 0.3s ease; /* smooth sliding */
-  will-change: transform;
-}
-
-.slider-item {
-  flex: 0 0 384px; /* fixed width */
-  box-sizing: border-box;
-  padding: 10px;
-  text-align: center;
-}
-
-.slider-item video {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.slider-navigation-previous,
-.slider-navigation-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  color: #333;
-  user-select: none;
-}
-
-.slider-navigation-previous {
-  left: 10px;
-}
-
-.slider-navigation-next {
-  right: 10px;
-}
-
-
-    </style>
-</body>
 
 
   <footer class="footer">

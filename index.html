@@ -29,20 +29,20 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 <body>
 
@@ -213,7 +213,11 @@
               <source src="carusel-videos/hicom.mp4" type="video/mp4">
             </video>
             <p class="video-title">HiCoM</p>
+
+            
           </div>
+
+        
           <div class="item item-video3">
               <video poster="" id="video3" autoplay controls muted loop height="100%">
                 <source src="carusel-videos/Dynamic3DGaussians.mp4" type="video/mp4">
@@ -232,27 +236,128 @@
 </section>
 <!-- End video carousel -->
 
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item item-steak">
+          <video poster="" id="steak" autoplay controls muted loop playsinline height="100%">
+            <source src="teaser-videos/0.2-spawn500-dyn-color-spawn-300iter-new-loss-color-map-min-dist-1-col-mask.mp4"
+                    type="video/mp4">
+            <p class="video-title">Ours</p>
+            <h2 class="Ours">
+          </video>
+          <p class="video-title">Ours</p>
+            <h2 class="Ours">
+        </div>
+
+        <div class="item item-sear">
+          <video poster="" id="sear" autoplay controls muted loop playsinline height="100%">
+            <source src="teaser-videos/org-code-spawn1-iter300-0.00007.mp4""
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="carusel-videos/hicom.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-salmon">
+          <video poster="" id="salmon" autoplay controls muted loop playsinline height="100%">
+            <source src="carusel-videos/Dynamic3DGaussians.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-spinach">
+          <video poster="" id="spinach" autoplay controls muted loop playsinline height="100%">
+            <source src="carusel-videos/output_gt.mp4"
+                    type="video/mp4">
+          </video>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 <body>
   <style>
-      #results-carousel {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+#results-carousel {
+  display: flex !important;        /* force flex display */
+  flex-wrap: nowrap;               /* keep items in one row */
+  justify-content: center;         /* center horizontally */
+  gap: 20px;                      /* space between items */
 }
 
 #results-carousel .item {
+  flex: 0 0 auto;                 /* do not grow or shrink, keep size */
   text-align: center;
+  width: 300px;                   /* fixed width for each item */
 }
 
 #results-carousel video {
-  width: 300px;
+  width: 100%;                   /* fill parent .item width */
   height: auto;
   border-radius: 6px;
 }
-}
-  </style>
-</body>
 
+    .carousel {
+  width: 100%;
+  overflow: hidden; /* hide horizontal overflow */
+  position: relative;
+}
+
+.slider {
+  outline: none; /* remove focus outline if desired */
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.3s ease; /* smooth sliding */
+  will-change: transform;
+}
+
+.slider-item {
+  flex: 0 0 384px; /* fixed width */
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+
+.slider-item video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.slider-navigation-previous,
+.slider-navigation-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  color: #333;
+  user-select: none;
+}
+
+.slider-navigation-previous {
+  left: 10px;
+}
+
+.slider-navigation-next {
+  right: 10px;
+}
+
+
+    </style>
+</body>
 
 
   <footer class="footer">

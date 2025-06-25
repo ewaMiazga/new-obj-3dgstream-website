@@ -210,60 +210,64 @@
     <div class="content" style="margin-top: 3rem;">
       <h3 class="title is-4">Qualitative Results</h3>
 
-      <!-- Videos Section -->
-      <section class="hero teaser">
-        <div class="container is-max-desktop">
-          <h2 class="title is-4 has-text-centered">Side-by-Side Comparison</h2>
-      
-          <div class="columns is-centered is-vcentered is-multiline">
-            <!-- Video 1 -->
-            <div class="column is-one-fifth has-text-centered">
-              <p><strong>Ours</strong></p>
-              <video autoplay loop muted playsinline width="100%">
-                <source src="teaser-videos/0.2-spawn500-dyn-color-spawn-300iter-new-loss-color-map-min-dist-1-col-mask.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-      
-            <!-- Video 2 -->
-            <div class="column is-one-fifth has-text-centered">
-              <p><strong>3DGStream</strong></p>
-              <video autoplay loop muted playsinline width="100%">
-                <source src="teaser-videos/org-code-spawn1-iter300-0.00007.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-      
-            <!-- Video 3 -->
-            <div class="column is-one-fifth has-text-centered">
-              <p><strong>HiCoM</strong></p>
-              <video autoplay loop muted playsinline width="100%">
-                <source src="carusel-videos/hicom.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-      
-            <!-- Video 4 -->
-            <div class="column is-one-fifth has-text-centered">
-              <p><strong>Dynamic 3D Gaussians</strong></p>
-              <video autoplay loop muted playsinline width="100%">
-                <source src="carusel-videos/Dynamic3DGaussians.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-      
-            <!-- Video 5 -->
-            <div class="column is-one-fifth has-text-centered">
-              <p><strong>Ground Truth</strong></p>
-              <video autoplay loop muted playsinline width="100%">
-                <source src="carusel-videos/output_gt.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Videos section -->
+<!-- Videos Section -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4 has-text-centered">Side-by-Side Comparison</h2>
+
+    <div style="display: flex; overflow-x: auto; gap: 1rem; padding-bottom: 1rem; align-items: center;">
+
+      <!-- Video 1 -->
+      <div style="flex: 0 0 320px; text-align: center;">
+        <p><strong>Ours</strong></p>
+        <video autoplay loop muted playsinline width="100%">
+          <source src="teaser-videos/0.2-spawn500-dyn-color-spawn-300iter-new-loss-color-map-min-dist-1-col-mask.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Video 2 -->
+      <div style="flex: 0 0 320px; text-align: center;">
+        <p><strong>3DGStream</strong></p>
+        <video autoplay loop muted playsinline width="100%">
+          <source src="teaser-videos/org-code-spawn1-iter300-0.00007.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Video 3 -->
+      <div style="flex: 0 0 320px; text-align: center;">
+        <p><strong>HiCoM</strong></p>
+        <video autoplay loop muted playsinline width="100%">
+          <source src="carusel-videos/hicom.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Video 4 -->
+      <div style="flex: 0 0 320px; text-align: center;">
+        <p><strong>Dynamic 3D Gaussians</strong></p>
+        <video autoplay loop muted playsinline width="100%">
+          <source src="carusel-videos/Dynamic3DGaussians.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Video 5 -->
+      <div style="flex: 0 0 320px; text-align: center;">
+        <p><strong>Ground Truth</strong></p>
+        <video autoplay loop muted playsinline width="100%">
+          <source src="carusel-videos/output_gt.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End Videos section -->
+
+
 
       <p class="is-size-6 mt-2">
         Eventhough all the methods yield satisfactory results in

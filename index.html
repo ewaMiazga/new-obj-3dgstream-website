@@ -122,7 +122,7 @@
       <div class="column has-text-centered">
         <p><strong>Ours</strong></p>
         <video autoplay loop muted playsinline width="100%">
-          <source src="teaser-videos/0.2-spawn500-dyn-color-spawn-300iter-new-loss-color-map-min-dist-1-col-mask.mp4" type="video/mp4">
+          <source src="teaser-videos/0.2-spawn1000-dyn-color-spawn-multiview-500iter-color-map-min-dist-1-col-mask-thre-0.00.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -204,7 +204,7 @@
         <div style="flex: 0 0 320px; text-align: center;">
           <p><strong>Ours</strong></p>
           <video autoplay loop muted playsinline width="100%">
-            <source src="teaser-videos/0.2-spawn500-dyn-color-spawn-300iter-new-loss-color-map-min-dist-1-col-mask.mp4" type="video/mp4">
+            <source src="teaser-videos/0.2-spawn1000-dyn-color-spawn-multiview-500iter-color-map-min-dist-1-col-mask-thre-0.00.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -302,16 +302,12 @@
       
       <p class="is-size-6 mt-2">
         Improved 3DG-Stream The reconstruction of the new
-        object is detailed and does not suffer from underreconstruction. However, one notable flaw is the flickering effect observed in the output video - the object is
-        not consistently reconstructed in every frame. This issue
-        arises because the difference maps used to identify underreconstructed regions are computed from a single view. If
-        the object is occluded or not visible in that view, the corresponding region is not flagged for densification, and thus
-        remains under-reconstructed. Conversely, when the object
-        is visible, it is accurately reconstructed, demonstrating that
-        the method behaves as intended when provided with the correct visibility cues.
+        object is detailed and does not suffer from underreconstruction. If
+        the object is occluded and visible from only one view, the corresponding region is still flagged for densification, and thus
+        remains well represented, thanks to multiview color difference maps used during training.
         It is also worth noting that the dynamic spawning mechanism successfully prevents excessive Gaussian spawning
         in unrelated regions, effectively avoiding artifacts such
-        as “flying Gaussians.” Nonetheless, the reliance on view-dependent evaluation remains a key limitation of this approach and should be further addressed in future work.
+        as "flying Gaussians."
       </p>
       </div>
       
